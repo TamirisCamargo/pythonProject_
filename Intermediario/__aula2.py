@@ -11,7 +11,14 @@ Aula 16 (Parte 3)
 
 def func(*args, **kwargs):
     print(args)
-    print(kwargs)
+
+    idade = kwargs.get('idade')
+
+    if idade is not None:
+        print(idade)
+
+
+    # print(kwargs)
     # for v in args:
     #     print(v)
 
@@ -26,4 +33,4 @@ def func(*args, **kwargs):
 
 lista = [1,2,3,4,5]
 lista2 = [10,20,30,40,50]
-func(*lista, *lista2, nome='Tami', sobrenome='Camargo')
+func(*lista, *lista2, nome='Tami', sobrenome='Camargo', idade=30)
