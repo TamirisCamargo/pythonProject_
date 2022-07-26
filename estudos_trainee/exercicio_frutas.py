@@ -26,14 +26,19 @@ frutas = {
     'Acerola': 3.10,
     'Kiwi': 7.00
 }
-print(frutas['Acerola'])
 
 escolha_fruta = input('Digite a fruta desejada: ')
-# peso = input('Digite o peso desejado: ')
+# print(escolha_fruta)
 
-if escolha_fruta in frutas:
-    print(escolha_fruta)
+# if escolha_fruta.lower() in frutas:
+
+for i in frutas:
+    if escolha_fruta.lower() in str(frutas).lower():
+        peso = input('Digite o peso desejado: ')
+        soma = float(peso) * float(frutas[escolha_fruta])
+        print(f'Obrigada, o valor total da fruta {escolha_fruta} é R$ {soma}')
 else:
-    print('Sorry, infelizmente não temos a fruta desejada')
+    print(f'Sorry, infelizmente não temos a fruta desejada. '
+          f' Segue nossa lista de frutas disponíveis {frutas}')
 
-# print(frutas['Amora'])
+
