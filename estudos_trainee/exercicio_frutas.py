@@ -27,7 +27,7 @@ frutas = {
     'Kiwi': 7.00
 }
 
-for i in frutas:
+[print(i) for i in frutas]
 
 
     escolha_fruta = input('Digite a FRUTA desejada: ').lower()
