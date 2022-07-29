@@ -14,41 +14,35 @@ Obs: use a função input() python para receber os parametros.
 ex: fruta = input('Qual fruta deseja comprar? ')
 """
 
-frutas = {
-    'banana': 1.50,
+frutas: dict[str, float] = {
+    'Banana': 1.50,
+    'Banana': 3.00,
     'Manga': 2.00,
     'Goiaba': 3.00,
     'Maçã': 1.55,
     'Abacaxi': 5.00,
     'Morango': 4.00,
     'Laranja': 2.50,
-    'Amora': 1.00,
+    'amora': 1.00,
     'Acerola': 3.10,
-    'Kiwi': 7.00
+    'Kiwi': 7.00,
+    'frutas-citricaas' : ['Banana': 1.2]
 }
 
-[print(i) for i in frutas]
-
-
-    escolha_fruta = input('Digite a FRUTA desejada: ').lower()
-    # print(i)
-
-    # # print(frutas)
-
-
-    if escolha_fruta in frutas:
+while True:
+    escolha_fruta = input('Digite a FRUTA desejada: ')
+    escolha_fruta = escolha_fruta.title()
+    if escolha_fruta in frutas.keys():
 
         try:
-            peso = float(input('Digite o PESO desejado: '))
-
-        except Exception as erro:
-            print(f'O problema encontrado foi {erro.__class__}')
-        else:
-            soma = peso * float(frutas[escolha_fruta])
+            peso = input('Digite o PESO desejado: ')
+            soma = float(peso) * float(frutas[escolha_fruta])
             print(f'Obrigada, o valor total da fruta {escolha_fruta} é R$ {soma}')
+        except Exception as erro:
+            print(f'Por favor, informar o peso em formato númerico')
+
     else:
         print(f'Sorry, infelizmente não temos a fruta desejada. \n'
               f'Segue nossa lista de frutas disponíveis {frutas}')
 
 
-    # print(i)
