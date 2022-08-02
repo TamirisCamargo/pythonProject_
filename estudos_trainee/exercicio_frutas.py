@@ -26,7 +26,7 @@ frutas: dict[str, float] = {
     'amora': 1.00,
     'Acerola': 3.10,
     'Kiwi': 7.00,
-    'frutas-citricaas' : ['Banana': 1.2]
+    # 'frutas-citricaas' : ['Banana': 1.2]
 }
 
 while True:
